@@ -1,0 +1,934 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Rishi's Portfolio</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="css/animate.css">
+	<link rel="stylesheet" href="css/flexslider.css">
+	<link rel="stylesheet" href="css/flexslider.css">
+	<link rel="stylesheet" href="fonts/icomoon/style.css">
+	<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+	<style>
+
+		/* #my_clone{
+			margin: 0;
+			font-family: 'Varela Round', sans-serif;
+			overflow: hidden;
+			background: linear-gradient(to right, #ffffff, #f8dce2);
+		} */
+
+		#image {
+			position: absolute;
+			justify-content: center;
+			display: flex;
+			align-items: center;
+			padding-right: 40%;
+		}
+
+		#btn {
+    width: auto; /* Adjust width based on content */
+    min-width: 50px; /* Optional: Set a minimum width */
+    background: linear-gradient(to right, rgba(39, 44, 45, 0.918), rgb(0, 0, 0));
+    padding: 10px 20px; /* Adjust padding for better spacing */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-size: 20px;
+    border-radius: 20px;
+    color: white;
+    border: none;
+    transition: all 0.5s;
+    cursor: pointer;
+    box-shadow: 2px 2px 10px rgba(0, 255, 208, 0.918), 2px 2px 10px rgb(220, 15, 203);
+    white-space: nowrap; /* Prevents text wrapping */
+}
+
+		#btn:hover {
+			box-shadow: 2px 2px 20px rgba(0, 255, 208, 0.918), 2px 2px 20px rgb(220, 15, 203);
+			letter-spacing: 2px;
+		}
+
+		#voice{
+    width: 200px;
+    display: none;
+	opacity: 50;
+}
+
+		#particles-js {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			z-index: 1;
+		}
+		
+		.site-hero {
+			position: relative;
+			overflow: hidden;
+		}
+		.container {
+			position: relative;
+			z-index: 2;
+		}
+
+		.perspective {
+			position: relative;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+
+		.card {
+			width: 270px;
+			margin-bottom: 50px;
+			height: 413px;
+			box-shadow: 0 70px 63px -60px #494848;
+			transform-style: preserve-3d;
+			transition: transform .05s linear;
+			position: relative;
+		}
+
+		.thumb {
+			background-size: cover;
+			height: 100%;
+			width: 100%;
+			border-radius: 15px;
+			position: relative;
+			background-position: center;
+		}
+
+		.thumb::after {
+			background: inherit;
+			content: '';
+			display: block;
+			position: absolute;
+			left: -60px;
+			top: 40px;
+			width: 100%;
+			height: 108%;
+			z-index: -1;
+			filter: blur(55px);
+		}
+
+		.card h2 {
+			position: absolute;
+			top: 10px;
+			left: 15px;
+			font-size: 24px;
+			font-weight: 600;
+			color: white;
+			transform: translateZ(80px);
+		}
+
+		.card span {
+			position: absolute;
+			bottom: 20px;
+			left: 15px;
+			font-size: 18px;
+			font-weight: 400;
+			color: white;
+			transform: translateZ(35px);
+		}
+		#typewriter {
+			font-size: 1.5rem;
+			font-weight: bold;
+		}
+		.cursor {
+			font-size: 1.5rem;
+			color: #fff;
+			animation: blink 0.7s infinite;
+		}
+		@keyframes blink {
+			50% { opacity: 0; }
+		}
+	</style>
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/style.css">
+
+	<link href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,700" rel="stylesheet">
+
+
+</head>
+<body data-spy="scroll" data-target="#pb-navbar" data-offset="200">
+
+
+
+	<nav class="navbar navbar-expand-lg site-navbar navbar-light bg-light" id="pb-navbar">
+
+		<div class="container">
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample09" aria-controls="navbarsExample09" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+
+			<div class="collapse navbar-collapse justify-content-md-center" id="navbarsExample09">
+				<ul class="navbar-nav">
+					<li class="nav-item"><a class="nav-link" href="#section-home">Home</a></li>
+					<li class="nav-item"><a class="nav-link" href="#section-portfolio">Portfolio</a></li>
+					<li class="nav-item"><a class="nav-link" href="#section-resume">Resume</a></li>
+					<li class="nav-item"><a class="nav-link" href="#section-about">About</a></li>
+					<!-- <li class="nav-item"><a class="nav-link" href="#my_clone">Talk to my clone</a></li> -->
+					<li class="nav-item"><a class="nav-link" href="#section-contact">Contact</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+
+
+
+	<section class="site-hero" style="background-image: url(images/oo.gif);" id="section-home" data-stellar-background-ratio="0.5">
+		<!-- Particle container -->
+		<div id="particles-js"></div>
+	
+		<div class="container">
+			<div class="row intro-text align-items-center justify-content-center">
+				<div class="col-md-10 text-center pt-5">
+					<h1 class="site-heading site-animate">
+						Hello, I'm <strong class="d-block">Rishi Rai Saxena</strong>
+					</h1>
+					<strong class="d-block text-white text-uppercase letter-spacing">
+						<span id="typewriter"></span><span class="cursor">|</span>
+					</strong>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+
+
+
+
+	<section class="site-section" id="section-portfolio">
+		<div class="container">
+			<div class="row">
+				<div class="section-heading text-center col-md-12">
+					<h2>Featured <strong>Portfolio</strong></h2>
+				</div>
+			</div>
+			<div class="filters">
+				<ul>
+					<li class="active" data-filter="*">All</li>
+					<li data-filter=".genai">Strategy</li>
+					<li data-filter=".cv">Operations</li>
+					<li data-filter=".tsa">Innovation</li>
+					<li data-filter=".fd">Transformation</li>
+				</ul>
+			</div>
+
+			<div class="filters-content">
+				<div class="row grid">
+					<div class="single-portfolio col-sm-4 all cv">
+						<div class="relative">
+							<div class="thumb">
+								<div class="overlay overlay-bg"></div>
+								<img class="image img-fluid" src="images/lel.gif" alt="">
+							</div>
+							<a href="https://ai-careerbuddy.streamlit.app/" class="img-pop-up">  
+								<div class="middle">
+									<div class="text align-self-center d-flex"><img src="https://ai-careerbuddy.streamlit.app/" alt=""></div>
+								</div>
+							</a>                                  
+						</div>
+						<div class="p-inner">
+							<h4><a href="https://ai-careerbuddy.streamlit.app/">AI Career Buddy </a></h4>
+							<div class="cat">Demonstrates digital transformation by embedding AI-driven decision systems into learning and workforce development processes.</div>
+						</div>                                         
+					</div>
+					<div class="single-portfolio col-sm-4 all genai">
+						<div class="relative">
+							<div class="thumb">
+								<div class="overlay overlay-bg"></div>
+								<img class="image img-fluid" src="images/k.gif" alt="">
+							</div>
+							<a href="https://github.com/Rishi-Rai-Saxena/Intelligent-Inventory-Management-through-A.I.-for-Demand-Forecasting" class="img-pop-up">  
+								<div class="middle">
+									<div class="text align-self-center d-flex"><img src="https://github.com/Rishi-Rai-Saxena/Intelligent-Inventory-Management-through-A.I.-for-Demand-Forecasting" alt=""></div>
+								</div>
+							</a>                                  
+						</div>
+						<div class="p-inner">
+							<h4><a href="https://github.com/Rishi-Rai-Saxena/Intelligent-Inventory-Management-through-A.I.-for-Demand-Forecasting">Intelligent Inventory Management</a></h4>
+							<div class="cat">Optimizes inventory planning using forecasting, KPIs, and decision analytics for multi-location business operations.</div>
+						</div>                                         
+					</div>                            
+					<div class="single-portfolio col-sm-4 all tsa">
+						<div class="relative">
+							<div class="thumb">
+								<div class="overlay overlay-bg"></div>
+								<img class="image img-fluid" src="images/tsa.gif" alt="">
+							</div>
+							<a href="https://github.com/Rishi-Rai-Saxena/A-B-Testing-in-Python-for-User-Efficiency" class="img-pop-up">  
+								<div class="middle">
+									<div class="text align-self-center d-flex"><img src="https://github.com/Rishi-Rai-Saxena/A-B-Testing-in-Python-for-User-Efficiency" alt=""></div>
+								</div>
+							</a> 
+
+						</div>
+						<div class="p-inner">
+							<h4><a href="https://github.com/Rishi-Rai-Saxena/A-B-Testing-in-Python-for-User-Efficiency">A/B Testing for User Efficiency</a></h4>
+							<div class="cat">Applies statistical experimentation to evaluate user behavior, conversion outcomes, and product optimization decisions</div>
+						</div>
+					</div>
+					<div class="single-portfolio col-sm-4 all genai">
+						<div class="relative">
+							<div class="thumb">
+								<div class="overlay overlay-bg"></div>
+								<img class="image img-fluid" src="images/ai2.gif" alt="">
+							</div>
+							<a href="https://github.com/Rishi-Rai-Saxena/AI-Negotiation-Simulator-for-Enhancing-Communication-Tactics-" class="img-pop-up">  
+								<div class="middle">
+									<div class="text align-self-center d-flex"><img src="https://github.com/Rishi-Rai-Saxena/AI-Negotiation-Simulator-for-Enhancing-Communication-Tactics-" alt=""></div>
+								</div>
+							</a>                                
+						</div> 
+						<div class="p-inner">
+							<h4><a href="https://github.com/Rishi-Rai-Saxena/AI-Negotiation-Simulator-for-Enhancing-Communication-Tactics-">AI Negotiation Simulator</a></h4>
+							<div class="cat">Models negotiation strategies to improve managerial decision-making, communication effectiveness, and organizational behavior outcomes.</div>
+						</div>
+					</div>
+					<div class="single-portfolio col-sm-4 all fd">
+						<div class="relative">
+							<div class="thumb">
+								<div class="overlay overlay-bg"></div>
+								<img class="image img-fluid" src="images/s.gif" alt="">
+							</div>
+							<a href="https://github.com/HrithikRai/FraudHawk.git" class="img-pop-up">  
+								<div class="middle">
+									<div class="text align-self-center d-flex"><img src="https://github.com/HrithikRai/FraudHawk.git" alt=""></div>
+								</div>
+							</a>                                
+						</div>
+						<div class="p-inner">
+							<h4><a href="https://github.com/HrithikRai/FraudHawk.git">Blockchain-Driven Multi-Tiered Aid Distribution (Conceptual)</a></h4>
+							<div class="cat">Designs transparent governance systems for efficient, traceable, and conditional distribution of humanitarian resources.</div>
+						</div>
+					</div>
+					<div class="single-portfolio col-sm-4 all fd">
+						<div class="relative">
+							<div class="thumb">
+								<div class="overlay overlay-bg"></div>
+								<img class="image img-fluid" src="images/r.gif" alt="">
+							</div>
+							<a href="https://github.com/HrithikRai/PhishNet.git" class="img-pop-up">  
+								<div class="middle">
+									<div class="text align-self-center d-flex"><img src="https://github.com/HrithikRai/PhishNet.git" alt=""></div>
+								</div>
+							</a>                                
+						</div>
+						<div class="p-inner">
+							<h4><a href="https://github.com/HrithikRai/PhishNet.git">Cryptocurrency Adoption in Emerging Markets</a></h4>
+							<div class="cat">Analyzes regulatory frameworks, governance structures, and digital financial systems shaping emerging market economies.</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- .section -->
+
+	
+	<section class="site-section" id="section-resume">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 mb-5">
+					<div class="section-heading text-center">
+						<h2>My <strong>Resume</strong></h2>
+					</div>
+				</div>
+	
+				<!-- Education Section -->
+				<div class="col-md-12">
+					<h2 class="mb-4">Education</h2>
+					<div class="resume-item mb-4">
+						<h3>Bachelor of Commerce (Honours) with Research</h3>
+						<span class="date"><span class="icon-calendar"></span> September 2021 – June 2024</span>
+						<p>Overall Percentage: 89.3% (Top 5 in cohort)</p>
+            <p>Relevant Coursework: Advanced Statistical Analysis, Business Economics, Research Methodology, Digital Marketing.</p>
+						<span class="school">Institute for Excellence in Higher Education, Barkatullah University, Bhopal, India</span>
+					</div>
+	
+					<div class="resume-item mb-4">
+						<h3>Higher Secondary Education</h3>
+						<span class="date"><span class="icon-calendar"></span> April 2020 – July 2021</span>
+						<p>Overall Percentage: 92% (Amongst Top 10)</p>
+            <p>Commerce with elective as Information Practices.</p>
+						<span class="school">Bal Bhawan School, Bhopal, India</span>
+					</div>
+				</div>
+	
+				<!-- Experience Section -->
+				<div class="col-md-12">
+					<h2 class="mb-4"> Work Experience</h2>
+	
+					<div class="resume-item mb-4">
+						<h3>Strategy, Analytics & Digital Programs Manager</h3>
+						<span class="date"><span class="icon-calendar"></span> January 2025 – Present</span>
+						<ul>
+							<li>Execute strategic planning and operational coordination for over 15 health, nutrition, and community awareness initiatives through the application of structured activity planning and resource allocation frameworks.</li>
+							<li>Implementation of monitoring and evaluation frameworks to measure participation rates, unit costs per beneficiary, completion ratios, and timeframes, thereby enhancing program efficacy and impact by 25%.</li>
+							<li>Prioritize and expand programs through comprehensive cost analysis, impact evaluation, and performance assessment.</li>
+              <li>Delegate responsibilities, oversee field activities, and record academic progress for approximately 100 student volunteers each year.</li>
+              <li>Implemented structured digital reporting systems that integrated field data, financial information, and outcome metrics, leading to a 40% reduction in reporting cycle time and enhancing transparency for government and donor stakeholders..</li>
+						</ul>
+						<span class="school">Asha Smita Foundation, Bhopal, India</span>
+					</div>
+	
+					<div class="resume-item mb-4">
+						<h3>Accounts Intern</h3>
+						<span class="date"><span class="icon-calendar"></span> Feb 2024 – March 2024</span>
+						<ul>
+							<li>Executed and assessed multiple GST returns, achieving complete compliance accuracy for corporate accounts..</li>
+							<li>Assisted with statutory audits and the compilation of financial statements, leading to a 30% enhancement in the thoroughness of audit documentation..</li>
+							<li>Created financial reporting templates utilizing Excel and Word.</li>
+						</ul>
+						<span class="school">Atishay Limited, Bhopal, India</span>
+					</div>
+	
+					<div class="resume-item mb-4">
+						<h3>Financial Analytics Intern</h3>
+						<span class="date"><span class="icon-calendar"></span> July 2023 – Feb 2024</span>
+						<ul>
+							<li>Evaluated client datasets for financial performance to assist in revenue monitoring and cost optimization.</li>
+							<li>Improved reporting accuracy by 30% through the development of automated financial models in Excel. These models analyzed trends in profitability, variance, and budget deviations.</li>
+							<li>Authored analytical reports utilized for financial performance review and forecasts analysis; these reports are generated regularly.</li>
+							<li>Assisted in validating data and reconciling finances to ensure compliance with internal and regulatory audit standards.</li>
+						</ul>
+						<span class="school">Mainwire Outsource Limited, Bhopal, India</span>
+					</div>
+	
+					<div class="resume-item mb-4">
+						<h3>Software Engineering Intern</h3>
+						<span class="date"><span class="icon-calendar"></span> April 2023 – Jun 2023</span>
+						<ul>
+							<li>Worked on creating and testing three application modules in Python and C# with the goal of improving the correctness of the process and cutting down on mistakes per transaction by 10%.</li>
+							<li>Helped with system monitoring and basic debugging tasks to enable smooth execution of operational workflows.</li>
+							<li>Worked with functional and technical teams to understand how software systems facilitate business operations by mapping business requirements into system workflows.</li>
+						</ul>
+						<span class="school">Atishay Limited, Bhopal, India</span>
+					</div>
+	
+					<div class="resume-item mb-4">
+						<h3>Business Analytics & Digital Operations Intern</h3>
+						<span class="date"><span class="icon-calendar"></span> May 2022 – Jul 2022</span>
+						<ul>
+							<li>Conducted research and compiled data for circulation planning and performance analysis of monthly publications throughout several Indian states.</li>
+							<li>Analyzed subscription and distribution data (over 3,000 records) to enhance printer utilization and reduce unsold inventory by 18%.</li>
+              <li>Developed straightforward forecasting algorithms to estimate demand and regional circulation strategies from historical distribution data.</li>
+              <li>Collaborated with the editorial and logistics departments to enhance the publication timetable and delivery schedules.</li>
+						</ul>
+						<span class="school">MP Global Express (Media & Publishing Venture), Bhopal, India</span>
+					</div>
+
+          <div class="resume-item mb-4">
+						<h3>Business Operations & Decision Support Intern</h3>
+						<span class="date"><span class="icon-calendar"></span> Jul 2021 – Jan 2022</span>
+						<ul>
+							<li>Evaluated over 2,000 complaints and financial records to facilitate audit preparedness and operational assessment.</li>
+							<li>Developed monthly performance dashboards to monitor resolution time, backlog trends, and reconciliation accuracy; enhanced reporting visibility by 30%.</li>
+							<li>Compiled systematic analytical reports to facilitate case prioritizing and evaluate service efficiency.</li>
+						</ul>
+						<span class="school">State Consumer Helpline, Bhopal, India</span>
+					</div>
+
+          <div class="resume-item mb-4">
+						<h3>Operations & Process Analytics Intern</h3>
+						<span class="date"><span class="icon-calendar"></span> Oct 2020 – Feb 2021</span>
+						<ul>
+							<li>Led to the mapping of work flows and standardization of services in grievance filing, which cut the time it took to handle cases by 15%.</li>
+							<li>Kept up with and checked more than 550 records of purchases and services to make sure the reconciliation process was correct.</li>
+							<li>Made automatic templates in Excel using Pivot Tables and conditional formulas, which cut down on mistakes made by hand by 20%.</li>
+              <li>Made weekly reports that showed the number of complaints, the percentage of them that were resolved, and the state of the backlog so that the organization could study and make changes.</li>
+						</ul>
+						<span class="school">State Consumer Helpline, Bhopal, India</span>
+					</div>
+
+          <div class="resume-item mb-4">
+						<h3>Program Coordinator (Volunteer)</h3>
+						<span class="date"><span class="icon-calendar"></span> April 2018 – Mar 2020</span>
+						<ul>
+							<li>Implemented and managed 17 community development programs, including sanitation, nutrition, health awareness, and consumer education, in government schools and rural institutions. These programs helped more than 2,000 individuals.</li>
+							<li>Designed program schedules, resource allocation plans, and formats for sessions, thereby ensuring a 15-20% decrease in operational costs because of improved logistical and financial planning.</li>
+							<li>Prepared structured activity reports and basic impact summaries for submission to government agencies as proof of funding for programs.</li>
+              <li>Conducted 15 training and awareness sessions, which led to a 25% increase in participation and engagement in subsequent events.</li>
+						</ul>
+						<span class="school">Asha Smita Foundation, Bhopal, India</span>
+					</div>
+	
+				</div>
+			</div>
+		</div>
+	</section>
+	
+
+	<section class="site-section" id="section-about">
+		<div class="container">
+			<div class="row mb-5 align-items-center">
+				<div class="col-lg-7 pr-lg-5 mb-5 mb-lg-0">
+					<img src="images/about.gif" alt="Image placeholder" class="img-fluid">
+				</div>
+				<div class="col-lg-5 pl-lg-5">
+					<div class="section-heading">
+						<h2>About <strong>Me</strong></h2>
+					</div>
+					<p class="lead"><b>My academic and project work has evolved across commerce, analytics, and applied research, driven by a consistent focus on understanding why business and societal systems fail—and how data-driven design can make them work better. I have built forecasting and decision-intelligence solutions for inventory and revenue planning, led interdisciplinary research on circular supply chains and sustainability economics, and explored technology-enabled governance through applied projects. Across these experiences, I have learned to frame complex organizational challenges as structured problems, translating them into systems that prioritize measurability, scalability, and real-world outcomes.</b></p>
+					<p class="mb-5  ">Hi, I’m Rishi Rai Saxena—an interdisciplinary commerce graduate who designs analytical and AI-enabled systems at the intersection of strategy, data-driven decision-making, and digital system design. My interests center on embedding AI within organizations as a decision-support and product layer, ensuring that technical models align with business logic, user behavior, and operational constraints. I am motivated by building solutions that move beyond experimentation and deliver sustained, measurable impact.</p>
+
+					<p>
+						<a href="#section-contact" class="btn btn-primary px-4 py-2 btn-sm smoothscroll">Hire Me</a>
+						<a href="resume.pdf" class="btn btn-secondary px-4 py-2 btn-sm">Download CV</a>
+					</p>
+				</div>
+			</div>
+
+
+		</div>
+	</section>
+
+
+	<!-- <section class="site-section">
+		<div class="container">
+			<div class="row mb-5">
+				<div class="col-md-12">
+					<div class="section-heading text-center">
+						<h2> <strong>Testimonials</strong></h2>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-6">
+
+					<div class="block-47 d-flex mb-5">
+						<div class="block-47-image">
+							<img src="images/rout.jpeg" alt="Image placeholder" class="img-fluid">
+						</div>
+						<blockquote class="block-47-quote">
+							<p>&ldquo;His technical expertise and efficiency, particularly in AI and data science, were complemented by his dedication and strong work ethic. He remarkably grasped complex challenges and turned them into practical solutions. Beyond technical skills, Hrithik is a proactive communicator and a collaborative team player and I wholeheartedly recommend him.&rdquo;</p>
+							<cite class="block-47-quote-author">&mdash; Ashis Rout, Associate Vice President <a href="https://xebia.com/">Xebia.</a></cite>
+						</blockquote>
+					</div>
+
+				</div>
+				<div class="col-md-6">
+
+					<div class="block-47 d-flex mb-5">
+						<div class="block-47-image">
+							<img src="images/marcus.jpeg" alt="Image placeholder" class="img-fluid">
+						</div>
+						<blockquote class="block-47-quote">
+							<p>&ldquo;His enthusiasm was infectious, and his
+								presence on the team elevated our collective productivity and morale.
+								One of the most notable aspects of Hrithik's performance was his ability to translate complex
+								data insights into actionable recommendations. His work directly contributed to several key
+								projects, helping us make data-driven decisions that improved our business outcomes.&rdquo;</p>
+							<cite class="block-47-quote-author">&mdash; Marcus Bauer, Chief Technical Officer<a href="https://www.livello.com/?lang=en">Livello Technologies</a></cite>
+						</blockquote>
+					</div>
+
+				</div>
+
+				<div class="col-md-6">
+
+					<div class="block-47 d-flex mb-5">
+						<div class="block-47-image">
+							<img src="images/nirman.jpeg" alt="Image placeholder" class="img-fluid">
+						</div>
+						<blockquote class="block-47-quote">
+							<p>&ldquo;Nirman Group's analytical prowess was greatly influenced by Hrithik's technical proficiency in data engineering, cloud AI/ML deployment, MLOps, and AI-based financial modeling..&rdquo;</p>
+							<cite class="block-47-quote-author">&mdash; <a href="https://nirmanbroking.com/">Nirman Share Brokers</a></cite>
+						</blockquote>
+					</div>
+
+				</div>
+
+			</div>
+		</div>
+	</section> -->
+
+
+	<section class="site-section pb-0"  id="section-services">
+		<div class="container">
+
+			<div class="row mb-4">
+				<div class="col-md-12">
+					<div class="section-heading text-center">
+						<h2>My <strong>Leadership</strong></h2>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+
+				<div class="col-md-6 col-lg-4 text-center mb-5">
+					<div class="site-service-item site-animate" data-animate-effect="fadeIn">
+						<span class="icon">
+							<span class="icon-browser2"></span>
+						</span>
+						<h3 class="mb-4">President - Sakshatkar Club, Institute for Excellence in Higher Education</h3>
+						<p>(Aug 2024 – May 2025) Directed the planning and implementation of career readiness initiatives, including simulated interviews and assessment sessions, for over 400 students.
+						</p>
+						<p><a href="#" class="site-link">Learn More <i class="icon-chevron-right"></i></a></p>
+					</div>
+				</div>
+				<div class="col-md-6 col-lg-4 text-center mb-5">
+					<div class="site-service-item site-animate" data-animate-effect="fadeIn">
+						<span class="icon">
+							<span class="icon-presentation"></span>
+						</span>
+						<h3 class="mb-4">Event Coordinator, Manavta Club (Humanitarian Club), Institute for Excellence in Higher Education</h3>
+						<p>(March 2025 – May 2025) Organized animal welfare campaigns where more than 800 students participated in. Promoted campus compassion through adoption campaigns and veterinary check-up camps with local animal shelters and NGOs.
+						</p>
+						<p><a href="#" class="site-link">Learn More <i class="icon-chevron-right"></i></a></p>
+					</div>
+				</div>
+				<div class="col-md-6 col-lg-4 text-center mb-5">
+					<div class="site-service-item site-animate" data-animate-effect="fadeIn">
+						<span class="icon">
+							<span class="icon-video2"></span>
+						</span>
+						<h3 class="mb-4">Alumni Relations Executive, Alumni Relations Cell, Institute for Excellence in Higher Education
+
+						</h3>
+						<p> (Sep 2024 – May 2025): Working with more than 15 alumni to help students and alumni talk to each other.
+							
+						</p>
+						<p><a href="#" class="site-link">Learn More <i class="icon-chevron-right"></i></a></p>
+					</div>
+				</div>
+        <div class="col-md-6 col-lg-4 text-center mb-5">
+					<div class="site-service-item site-animate" data-animate-effect="fadeIn">
+						<span class="icon">
+							<span class="icon-video2"></span>
+						</span>
+						<h3 class="mb-4">Data Analyst, UDGAM Innovation Cell, Institute for Excellence in Higher Education
+
+						</h3>
+						<p> (Dec 2023 – Sep 2024): Supported project tracking, participation analysis, and funding-related reporting
+							
+						</p>
+						<p><a href="#" class="site-link">Learn More <i class="icon-chevron-right"></i></a></p>
+					</div>
+				</div>
+        <div class="col-md-6 col-lg-4 text-center mb-5">
+					<div class="site-service-item site-animate" data-animate-effect="fadeIn">
+						<span class="icon">
+							<span class="icon-video2"></span>
+						</span>
+						<h3 class="mb-4">Joint Secretary, Placement Cell, Institute for Excellence in Higher Education
+
+						</h3>
+						<p> (Jul 2023 – May 2024): Facilitated the coordination, scheduling, and documentation of placement activities.
+							
+						</p>
+						<p><a href="#" class="site-link">Learn More <i class="icon-chevron-right"></i></a></p>
+					</div>
+				</div>
+
+				
+
+			</div>
+		</div>
+	</section>
+
+	<section class="site-section" id="section-blog">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 mb-5">
+					<div class="section-heading text-center">
+						<h2>Technical & Managerial Skills</a></strong></h2>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-sm-6 col-lg-4 mb-4">
+					<div class="blog-entry">
+						<a href="#"><img src="images/timser.gif" alt="Image placeholder" class="img-fluid"></a>
+						<div class="blog-entry-text">
+							<h3><a href="https://medium.com/@hrithikraisaxena97/the-sheer-beauty-of-time-series-analysis-52550b2bc790">Analytics & Tools</a></h3>
+							<p class="mb-4">Python, SQL, R (basic), Power BI, MS Excel (advanced), Data Visualization, Statistical Analysis</p>
+
+						</div>
+					</div>
+				</div>
+
+				<div class="col-sm-6 col-lg-4 mb-4">
+					<div class="blog-entry">
+						<a href="https://medium.com/@hrithikraisaxena97/the-a-b-testing-bible-d6f8908c0a24"><img src="images/llm.jpeg" alt="Image placeholder" class="img-fluid"></a>
+						<div class="blog-entry-text">
+							<h3><a href="https://medium.com/@hrithikraisaxena97/llms-at-scale-turning-your-prototype-into-a-production-ready-powerhouse-061f1ffbb23f">Business & Management</a></h3>
+							<p class="mb-4">Decision Analysis, Program Planning, Budgeting, Reporting, Stakeholder Coordination.</p>
+
+						</div>
+					</div>
+				</div>
+
+				<div class="col-sm-6 col-lg-4 mb-4">
+					<div class="blog-entry">
+						<a href="#"><img src="images/ab.jpeg" alt="Image placeholder" class="img-fluid"></a>
+						<div class="blog-entry-text">
+							<h3><a href="#">Conceptual Strengths</a></h3>
+							<p class="mb-4">Systems Thinking, Analytical Reasoning, Interdisciplinary Problem Solving, Data-Driven Decision Making</p>
+
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</section>
+
+  <!-- Research Paper and Publication -->
+   <section class="site-section" id="section-blog">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 mb-5">
+					<div class="section-heading text-center">
+						<h2>Research Paper and Publications</a></strong></h2>
+					</div>
+				</div>
+			</div>
+
+				<div class="col-md-12">
+					<div class="resume-item mb-4">
+						<h3>Strategic Policy Interventions for India’s $5T Economy </h3>
+						<span class="date"><span class="icon-calendar"></span> Year 2025</span>
+						<p>Evaluated 18 proposals presented at the Global Investors Summit (Published)</p>
+            
+						<span class="school">BSSS Journal of Commerce</span>
+					</div>
+	
+					<div class="resume-item mb-4">
+						<h3>Using data driven approaches to overcome barriers in Interdisciplinary Education </h3>
+						<span class="date"><span class="icon-calendar"></span> Year 2025</span>
+						<p>designed Pathways that are data-driven for students who are not tech-savvy (Published)</p>
+						<span class="school">MRILAD, Bhopal School of Social Sciences</span>
+					</div>
+				</div>
+
+        <div class="resume-item mb-4">
+						<h3>AI-Driven Circular Supply Chains </h3>
+						<span class="date"><span class="icon-calendar"></span> Year 2025</span>
+						<p>Artificial intelligence used to the elimination of waste and facilitate just-in-time marketing
+            <span class="school">Accepted for Publication</span>
+					</div>
+				</div>
+
+        <div class="resume-item mb-4">
+						<h3>CBDCs & Financial Inclusion in Emerging Economies</h3>
+						<span class="date"><span class="icon-calendar"></span> Year 2025</span>
+						<p>Examined digital currency for financial accessibility (Published)</p>
+						<span class="school">Ecoknocks, Bhopal School of Social Sciences</span>
+					</div>
+				</div>
+  <!--Certifications -->
+   <section class="site-section" id="section-blog">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 mb-5">
+					<div class="section-heading text-center">
+						<h2>Certifications</a></strong></h2>
+					</div>
+				</div>
+			</div>
+
+				<div class="col-md-12">
+					<div class="resume-item mb-4">
+						<h3>Data Scientist Career Track (Statistics, Probability, Mathematics, Python, SQL, Machine Learning, Deep Learning)
+            <p>Mathematical Foundations for Machine Learning</p>
+            <p>Statistics for Data Science & Business Analytics</p>
+            <p>A/B Testing in Python</p>
+            <p>Introduction to R Programming</p>
+            <p>Introduction to SQL</p>
+            <p>Building Business Reports Using Power BI</p>
+            <p>Financial Analyst Certification</p>
+            <p>Product Management for AI & Data Science Projects</p>
+            <p>Applied Econometrics Workshop (One Week)</p>
+
+
+                        
+                           
+                           
+              
+                
+            </h3>            
+					</div>        
+				</div>
+
+	<section class="site-section" id="section-contact">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 mb-5">
+					<div class="section-heading text-center">
+						<h2>Get <strong>In Touch</strong></h2>
+					</div>
+				</div>
+
+
+				<div class="col-md-5 pl-md-5">
+					<h3 class="mb-5">My Contact Details</h3>
+					<ul class="site-contact-details">
+						<li>
+							<span class="text-uppercase">Email</span>
+							rishiraisaxena7@gmail.com
+						</li>
+						<li>
+							<span class="text-uppercase">Phone</span>
+							+91 9111137720
+						</li>
+
+						<li>
+							<span class="text-uppercase">Have a Question?</span>
+							<a href="https://forms.gle/x5Ks9oJBcrMeEhmU7">Click Here</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+	<footer class="site-footer">
+		<div class="container">
+
+			<div class="row mb-5">
+				<p class="col-12 text-center">
+					Copyright © 2025 All rights reserved | Made with Love by Rishi</a>
+				</p>
+			</div>
+			
+			<div class="row mb-5">
+				<div class="col-md-12 text-center">
+					<p>
+					
+						<a href="https://github.com/Rishi-Rai-Saxena" class="social-item"><span class="icon-github"></span></a>
+						<a href="https://www.linkedin.com/in/rishi-rai-saxena/" class="social-item"><span class="icon-linkedin2"></span></a>
+					</p>
+				</div>
+			</div>
+			
+		</div>
+	</footer>
+
+
+
+
+	<script src="js/vendor/jquery.min.js"></script>
+	<script src="js/vendor/jquery-migrate-3.0.1.min.js"></script>
+	<script src="js/vendor/popper.min.js"></script>
+	<script src="js/vendor/bootstrap.min.js"></script>
+
+	<script src="js/vendor/jquery.easing.1.3.js"></script>
+
+	<script src="js/vendor/jquery.stellar.min.js"></script>
+	<script src="js/vendor/jquery.waypoints.min.js"></script>
+
+	<script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+	<script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+	<script src="js/custom.js"></script>
+	<script>
+		particlesJS("particles-js", {
+			"particles": {
+				"number": {
+					"value": 100,
+					"density": {
+						"enable": true,
+						"value_area": 800
+					}
+				},
+				"color": {
+					"value": "#000000"
+				},
+				"shape": {
+					"type": "circle",
+					"stroke": {
+						"width": 0,
+						"color": "#000000"
+					}
+				},
+				"opacity": {
+					"value": 0.5,
+					"random": false,
+					"anim": {
+						"enable": false
+					}
+				},
+				"size": {
+					"value": 3,
+					"random": true
+				},
+				"line_linked": {
+					"enable": true,
+					"distance": 150,
+					"color": "#000000",
+					"opacity": 0.4,
+					"width": 1
+				},
+				"move": {
+					"enable": true,
+					"speed": 2,
+					"direction": "none",
+					"random": false,
+					"straight": false,
+					"out_mode": "out",
+					"bounce": false
+				}
+			},
+			"interactivity": {
+				"detect_on": "canvas",
+				"events": {
+					"onhover": {
+						"enable": true,
+						"mode": "grab"
+					},
+					"onclick": {
+						"enable": true,
+						"mode": "push"
+					}
+				}
+			}
+		});
+	</script>
+	<script>
+		const phrases = ["AI Enthusiast", "System Thinker", "Digital Strategist", "Analytics Explorer", "Product Designer"];
+		let currentPhraseIndex = 0;
+		let charIndex = 0;
+		let isDeleting = false;
+		
+		function typeEffect() {
+			const typewriter = document.getElementById("typewriter");
+			const currentPhrase = phrases[currentPhraseIndex];
+			
+			if (isDeleting) {
+				typewriter.textContent = currentPhrase.substring(0, charIndex--);
+			} else {
+				typewriter.textContent = currentPhrase.substring(0, charIndex++);
+			}
+	
+			if (!isDeleting && charIndex === currentPhrase.length + 1) {
+				isDeleting = true;
+				setTimeout(typeEffect, 1000); // Pause before deleting
+			} else if (isDeleting && charIndex === 0) {
+				isDeleting = false;
+				currentPhraseIndex = (currentPhraseIndex + 1) % phrases.length;
+				setTimeout(typeEffect, 500); // Pause before typing next
+			} else {
+				setTimeout(typeEffect, isDeleting ? 50 : 100);
+			}
+		}
+	
+		document.addEventListener("DOMContentLoaded", () => {
+			setTimeout(typeEffect, 1000);
+		});
+	</script>
+<!-- >	<script src="js/clone.js"></script> -->
+
+	<!-- Google Map -->
+    <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+    	<script src="js/google-map.js"></script> -->
+
+    </body>
+    </html>
